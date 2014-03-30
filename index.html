@@ -6,7 +6,8 @@
         <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
         <title>Way Out</title>
         <meta name="MainDescription" content="A proposal for numbered subway exits.">
-        <link rel="stylesheet" href="main.css">  
+        <link type="text/css" rel="stylesheet" href="main.css">  
+        <script src="https://maps.googleapis.com/maps/api/js?sensor=false"></script>
     </head>
 
         <body>
@@ -16,12 +17,18 @@
 
             <h2>What</h2>
 
-            <p>In East Asian countries it is common to <a href="https://www.google.com/maps/@37.5621801,127.0373248,17z">number subway exits</a> (<strong>出口</strong>). These numbers link subway stations to the surrounding streets, making it easy to navigate between them.</p>
+            <p>In East Asian countries it is common to number subway exits (<strong>出口</strong>). These numbers link subway stations to the surrounding streets, making it easy to navigate between them. For example, here is City Hall station (시청역) in Seoul: </p>
+
+            <div class="map_canvas" id="seoul"></div>
 
             <p>Numbered exits make it easier to <strong>know which exit is closest to where you want to go</strong>. You could make sure that you don't exit from the wrong end of the station (always a pain).</p>
             
             <p>It is easier to <strong>give directions</strong> with numbered exits. Businesses could list not only the closest subway station, but also the closest station exit to their location. Friends could agree to meet at a specific exit.</p>
-            
+
+            <p>Seems simple enough, but you rarely see numbered exits outside of East Asia. Here is Statmitte Station in Berlin:</p>
+
+            <div class="map_canvas" id="berlin"></div>
+
             <p><strong>Why don't Western subway systems have numbered exits?</strong></p>
             
             <h2>How</h2>
@@ -52,4 +59,35 @@
         <div id="footer"><hr><a href="https://github.com/christophergandrud">Christopher Gandrud</a> (March 2014)</div>
         
     </body>
+    <!-- Google Map API -->
+    <script>
+        function seoul_initialise() {
+            var seoul_canvas = document.getElementById('seoul');
+            var seoul_options = {
+                center: new google.maps.LatLng(37.5648981, 126.9773344),
+                zoom: 17,
+                mapTypeId: google.maps.MapTypeId.ROADMAP,
+                scrollwheel: false,
+                keyboardShortcuts: false,
+                disableDefaultUI: true
+            }
+            var seoul_map = new google.maps.Map(seoul_canvas, seoul_options)
+        }
+        function berlin_initialise() {
+            var berlin_canvas = document.getElementById('berlin');
+            var berlin_options = {
+                center: new google.maps.LatLng(52.5116946, 13.3894026),
+                zoom: 17,
+                mapTypeId: google.maps.MapTypeId.ROADMAP,
+                scrollwheel: false,
+                keyboardShortcuts: false,
+                disableDefaultUI: true
+            }
+            var berlin_map = new google.maps.Map(berlin_canvas, berlin_options)
+            var transitLayer = new google.maps.TransitLayer();
+            transitLayer.setMap(berlin_map);
+        }
+        google.maps.event.addDomListener(window, 'load', seoul_initialise);
+        google.maps.event.addDomListener(window, 'load', berlin_initialise);
+    </script>
 </html>
