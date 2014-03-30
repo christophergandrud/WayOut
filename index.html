@@ -16,40 +16,40 @@
         <div id="topbar">出口 1 2 3 4 <hr></div>
         <div id="main">
 
-            <h2>Numbering Subway Exits</h2>
+            <h1>Numbering Subway Exits</h1>
 
-            <p>In East Asian countries it is common to number subway exits (<strong>出口</strong>). These numbers link subway stations to the surrounding streets, making it easy to navigate between them. For example, here is <a href="http://en.wikipedia.org/wiki/City_Hall_Station_(Seoul)">City Hall Station (시청역)</a> in Seoul: <small class="sidenote"><i class="fa fa-code"></i> This has the <a href="https://developers.google.com/maps/documentation/javascript/layers#TransitLayer">transit layer</a> off. This is just what Google Maps looks like for Seoul and many East Asian cities.</small></p>
+            <p>In East Asian countries it is common to number subway exits (<strong><a href="https://www.google.com/search?q=%E5%87%BA%E5%8F%A3&espv=210&es_sm=91&tbm=isch&tbo=u&source=univ&sa=X&ei=lRY4U5awJMfKtAbRz4HADA&ved=0CFgQ7Ak&biw=1153&bih=893">出口</a></strong>) and show them on street maps in relation to the station plan. These numbers link subway stations to the surrounding streets, making it easy to navigate between them. For example, here is <a href="http://en.wikipedia.org/wiki/City_Hall_Station_(Seoul)">City Hall Station (시청역)</a> in Seoul: <small class="sidenote"><i class="fa fa-code"></i> No Google Maps <a href="https://developers.google.com/maps/documentation/javascript/layers#TransitLayer">transit layer</a>.</small></p>
 
             <div class="map_canvas" id="seoul"></div>
 
-            <p>Numbered exits make it easier to <strong>know which exit is closest to where you want to go</strong>. You could make sure that you don't exit from the wrong end of the station (always a pain).</p>
+            <p>Numbered exits make it easy to <strong>know which exit is closest to where you want to go</strong>. You can make sure that you don't exit from the wrong end of the station (always a pain).</p>
             
-            <p>It is easier to <strong>give directions</strong> with numbered exits. Businesses could list not only the closest subway station, but also the closest station exit to their location. Friends could agree to meet at a specific exit.</p>
+            <p>It is easy to <strong>give directions</strong> with numbered exits. Businesses cab list not only the closest subway station, but also the closest station exit to their location. Friends can agree to meet at a specific exit.</p>
 
             <p> Seems simple enough.</p>
 
             <h2>Western Subways</h2>
 
-            <p>But you rarely see numbered exits outside of East Asia. Here's <a href="http://en.wikipedia.org/wiki/Stadtmitte_(Berlin_U-Bahn)">Stadtmitte Station</a> in Berlin:</p> 
+            <p>But you rarely see numbered exits outside of East Asia. Here's <a href="http://en.wikipedia.org/wiki/Stadtmitte_(Berlin_U-Bahn)">Stadtmitte Station</a> in Berlin:<small class="sidenote"><i class="fa fa-code"></i> These maps have the <a href="https://developers.google.com/maps/documentation/javascript/layers#TransitLayer">transit layer</a> on.</small></p> 
 
 
             <div class="map_canvas" id="berlin"></div>
 
-            <p>Not only are the exits not numbered, they are not actually shown on the map. The station is designated by a blue and white 'U' (for <a href="http://www.bvg.de/index.php/en/17103/name/Underground.html">U-Bahn</a>), but the placement of the symbols on the map only roughly approximates their actual location. The total number of exits (about the same as City Hall Station) span about three blocks, are basically invisible on this map. If you get out of the wrong exit, you could be very far away from where you wanted to go.</p>
+            <p>Not only are the exits not numbered, they are not actually shown on the map. The station is designated by blue and white 'U's (for <a href="http://www.bvg.de/index.php/en/17103/name/Underground.html">U-Bahn</a>), but the placement of the symbols on the map only roughly approximates their actual location. The total number of exits (about the same as Seoul's City Hall Station). They span about three blocks, but are basically invisible on this map. If you come out of the wrong exit, you can be very far away from where you want to go.</p>
 
-            <p>The problem isn't particular to Google Maps either. The U-Bahn's own signage doesn't help guide riders into or out of particular exits.</p>
+            <p>The problem isn't particular to Google Maps either. The U-Bahn's own signage doesn't help guide riders into or out of particular entrances/exits.</p>
 
-            <p>Here is an other example from <a href="http://en.wikipedia.org/wiki/59th_Street_%E2%80%93_Columbus_Circle_(New_York_City_Subway)"> 59th Street Columbus Circle</a> in New York City:<small class="sidenote"><i class="fa fa-code"></i> These maps have the <a href="https://developers.google.com/maps/documentation/javascript/layers#TransitLayer">transit layer</a> on.</small></p>
+            <p>Here is another example from the <a href="http://en.wikipedia.org/wiki/59th_Street_%E2%80%93_Columbus_Circle_(New_York_City_Subway)"> 59th Street Columbus Circle station</a> in New York City:</p>
 
             <div class="map_canvas" id="nyc"></div>
 
-            <p>Again, the designation of the station on the map (this time a blue and white 'M') is only vaguely related to where riders would enter and exit the station. Finding a particular exit would be very difficult indeed.</p>
+            <p>Again, the designation of the station on the map (this time blue and white 'M's) is only vaguely related to where riders would enter and exit the station. Finding a particular exit could be very difficult indeed.</p>
 
             <blockquote class="question">Why don't Western subway systems have numbered exits?</blockquote>
             
             <h2>A Simple Proposal</h2>
 
-            <p>It would be easy to set up a system that would <strong>uniquely identify</strong> each exit and give riders information about each exit's <strong>relative position</strong>. For example, we could number each station exit in a <strong>clockwise order</strong> starting from the north-eastern most exit.</p>
+            <p>It would be easy to set up a system that would <strong>uniquely identify</strong> each exit and give riders information about each exit's <strong>relative position</strong>. For example, we could number each station exit in a <strong>clockwise order</strong> starting from the north-eastern most exit. Ideally the numbered exits will be show on street maps along with the station plan:</p>
         
             <img src="img/WayOutSchematic.svg", alt="WayOutSchematic"></img>
         

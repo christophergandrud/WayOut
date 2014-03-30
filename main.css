@@ -43,13 +43,11 @@ small {
     line-height: 1.2em;
 }
 
-/* Override the bootstrap style */
 blockquote {
     margin-top: 5%;
     font-weight: 600;
 }
 
-/* Insert the pseudo element - replicating what FontAwesome does */
 .question:before {
     content: "\f059"; 
     font-family: FontAwesome;
