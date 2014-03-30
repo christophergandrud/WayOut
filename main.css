@@ -54,6 +54,10 @@ b, strong {
     font-size: 22px;
 }
 
+#map_canvas {
+    width: 60%;
+}
+
 #footer {
     clear: both;
     position: relative;
