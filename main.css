@@ -29,6 +29,10 @@ h1, h2, h3, h4, h5, h6 {
     padding-top: 5%;
 }
 
+p {
+    text-align: justify;
+}
+
 a {
     color: #0083e8;
     text-decoration: none;
